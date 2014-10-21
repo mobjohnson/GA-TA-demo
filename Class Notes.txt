@@ -1,0 +1,90 @@
+Back End Web Development
+
+APIs
+10/22/14
+
+cd ~/dev/wdi/GA_TA
+
+Last class we talked about loops and conditionals. We wrote a program called  ex_teddit_conditional.rb that has three hash values:
+title, categories and up votes
+
+asked for users to input information for stories and categories and used values to upvote and downvote.
+
+Now, if you have enough time, with lots of friends that have spare time on their hands, you could walk your laptop to each of them and have them type in a story, to populate the data for our program. At least once every day!!!
+
+Or, you could get stories from… the Internet!!!
+
+That’s what we are going to do now.
+
+An API is an Application Programming Interface
+
+ex_teddit_conditional is an application. It provides output based on input. The programming interface is what the program wants you to give in, and what it gives back in return.
+
+In the case of ex_teddit_conditional, it wants input from the terminal and prints a response to the screen.
+
+For a web API, you can put the proper web address into the the box at the top and it gives you information from the database it has. In this case it will be 
+
+Before the break, we installed JSON view on everyones Chrome, so now it is time to make our first JSON call!!
+
+In the comments at the top of the starter code : ex_teddit_api_news.rb copy the web address shown for mashable and then paste it into your chrome browser
+
+Wow, that is still a lot of stuff (scroll down) how can we make sense of this?
+
+JSON is a data exchange format. it is easy for people to read, and easy for computers to look through and create. 
+
+Format takes characters for a language and structures it with punctuation, in this case square brackets, curly braces and commas. some of the words are in quotes, some words have colons behind them. Look familiar?
+
+BTW, this is what it looks like without a JSON extension. In Safari it looks like this:
+Oh NOOOO
+
+
+
+
+
+So we have retrieved information from the Internet, and stored in in variables in a program. If only we could store the information somewhere more permanent…
+
+Coming soon…. Ruby on Rails
+
+
+
+I think the best way to answer that question is to demonstrate it. Let me show you how it works, and then I can answer the question better.
+
+
+
+John, can you help Nicole finish her git pull?
+
+Paul, can you help
+
+Installed Chrome Extension - check
+
+Gems
+Description - 
+Install gems - check
+
+
+
+JSON
+
+API
+
+Instructions from starter code:
+
+delete
+
+def all_input
+end
+
+write
+
+get_input_digg
+end
+
+delete
+
+def all_input
+end
+
+write
+
+stories = get_input_digg(stories)
+show_all_stories stories
