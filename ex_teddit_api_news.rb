@@ -14,27 +14,8 @@
 require 'json'
 require 'rest_client'
 
-#class Story
-#  attr_accessor :title, :category, :upvotes, :stories
-#end
 
-# Yes this is great!!! Maybe instead of an individual class for Story, you could
-# have a FrontPage object
-
-#
-# initialize???
-
-# You could set up the basic story variables
-
-#
-# can then remove empty variables from methods?
-#
-# what type of class or local variables do I use?
-#
 stories = []
-
-
-# You should try converting this to OOP. It will be a good challenge.
 
 
 def get_input_digg(stories) #get stories from Digg
