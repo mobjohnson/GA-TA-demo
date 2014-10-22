@@ -1,6 +1,6 @@
 # We're going to add a remote data source to pull in
 # stories from Mashable, Digg, and reddit.
-  # http://mashable.com/stories.json
+  # http://mashable.com/stories.json ##############
   # http://digg.com/api/news/popular.json
   # http://www.reddit.com/.json
 # These stories will also be upvoted based on our rules. 
@@ -10,41 +10,36 @@
  # out of each story(Title, Category, Upvotes)
 # Add each story to an array and display your "Front page"
 
+### put in require for rest_client and json
+
+require 'json'
+require 'rest_client'
 
 
-def get_input
-  gets.chomp.downcase
-end
+### initialize empty stories array
 
 
-def calculate_upvotes(story, category) #calculate upvotes
-  upvotes = 1
-  if story.downcase.include? "cat" #Cats are pretty important, even if there is only one!
-    upvotes = upvotes * 5
-  end
-  if story.downcase.include? "bacon" #bacon is all anyone should care about
-    upvotes = upvotes * 8
-  end
-  if story.downcase.include? "food" #food is only somewhat of interest
-    upvotes = upvotes * 3
-  end
-  upvotes
-end
+### add method to get input from mashable
+### inclued JSON call to response variable
+### add .each loop to store hashes for title, category and upvotes
+### add a hash to stories 
+
+
+
 
 def show_all_stories(stories) #show all stories
   puts "Front Page:"
   puts
   stories.each do |story|
-    puts "Story: #{story[:s_title]}, Category: #{story[:s_story]}, Current upvotes: #{story[:s_upvotes]}"
+    puts "Story: #{story[:s_title]}, Category: #{story[:s_story]}"
     puts
   end
 end 
 
-puts "Welcome to Teddit! a text based news aggregator. Get today's news tomorrow!"
-puts "Please enter a News story:"
-story = get_input
-puts "Please give it a category:"
-category = get_input
-upvotes = calculate_upvotes(story, upvotes) #passes story and upvotes for evaluation
-puts "New story added! #{story}, Category: #{category.capitalize}, Current Upvotes: #{upvotes}"
+
+
+### create an empty array stories
+### call get_inpu_degg method with stories as a parameter
+###call the method to show all stories
+
 

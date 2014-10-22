@@ -96,6 +96,6 @@ def show_all_stories(stories) #show all stories
   end
 end	
 
-rstories = []
+stories = []
 stories = get_input_digg(stories) + get_input_mashable(stories) + get_input_reddit(stories)
-show_all_stories stories
+show_all_stories(stories)
