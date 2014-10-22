@@ -27,7 +27,8 @@ def get_input_mashable(stories)
     story[:title] = story['title']
     story[:category] = story['channel']
     stories << {output_title: story[:title], output_category: story[:category]}
-
+  end
+  stories
 end  
 
 
