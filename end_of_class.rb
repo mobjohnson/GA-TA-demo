@@ -21,14 +21,14 @@ stories = []
 ### inclued JSON call saved to response variable
 ### add .each loop to store hashes for title and category
 ### add a hash to stories 
-def get_input_mashable(stories) #get stories from Mashable
+def get_input_mashable(stories)
   response = JSON.parse(RestClient.get 'http://mashable.com/stories.json')
-  response['new'].each do |story|
-    story[:title] = story['title']
-    story[:category] = story['channel']
-    stories << { s_title: story[:title], s_story: story[:category]}
-  end
-  stories  
+    response['new'].each do |story|
+      story[:title] = story['title']
+      story[:category] = story['channel']
+      stories << {output_title: story[:title], output_story: story[:category]}
+    end
+  stories
 end
 
 
