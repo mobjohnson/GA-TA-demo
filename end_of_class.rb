@@ -38,7 +38,7 @@ def show_all_stories(stories) #show all stories
   puts "Front Page:"
   puts
   stories.each do |story|
-    puts "Story: #{story[:s_title]}, Category: #{story[:s_story]}"
+    puts "Story: #{story[:ouput_title]}, Category: #{story[:output_story]}"
     puts
   end
 end 
