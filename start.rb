@@ -15,27 +15,22 @@ require 'rest_client'
 
 
 ### initialize empty stories array
-stories = []
+
+
+
 
 ### add method to get input from mashable
-### inclued JSON call to response variable
-### add .each loop to store hashes for title, category and upvotes
+### include JSON call and store to response variable
+### add .each loop to store hashes for title( Later: category!)
 ### add a hash to stories 
 
 ### just do title now!!!
-def get_input_mashable(stories)
-  response = JSON.parse(RestClient.get 'http://mashable.com/stories.json')
-  response['new'].each do |story|
-    story[:title] = story['title']
-    stories << { output_title: story[:title] }
-  end  
-  stories
-end 
 
 
 
 
-### ok, now add category to our new method
+
+# ok, now add category to our new method
 
 def show_all_stories(stories) #show all stories
   puts "Front Page:"
@@ -49,9 +44,8 @@ end
 
 
 
-### save stories as a call get_input_mahable method 
+### save stories as a call get_input_mashable method 
 ### with stories as a parameter
 ### call the method to show all stories
-stories = get_input_mashable(stories)
-show_all_stories(stories)
+
 

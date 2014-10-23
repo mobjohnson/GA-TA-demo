@@ -16,10 +16,12 @@ require 'rest_client'
 
 ### initialize empty stories array
 
+stories = []
+
 
 ### add method to get input from mashable
-### inclued JSON call to response variable
-### add .each loop to store hashes for title, category and upvotes
+### include JSON call and store to response variable
+### add .each loop to store hashes for title( Later: category!)
 ### add a hash to stories 
 
 ### just do title now!!!
@@ -42,7 +44,8 @@ end
 
 
 
-### call get_input_mashable method with stories as a parameter
-###call the method to show all stories
+### save stories as a call get_input_mashable method 
+### with stories as a parameter
+### call the method to show all stories
 
 

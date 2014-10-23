@@ -27,7 +27,7 @@ def get_input_mashable(stories)
   response = JSON.parse(RestClient.get 'http://mashable.com/stories.json')
   response['new'].each do |story|
     story[:title] = story['title']
-    stories << { output_title: story[:title] }
+    stories << {output_title: story[:title]}
   end  
   stories
 end 
@@ -49,9 +49,8 @@ end
 
 
 
-### save stories as a call get_input_mahable method 
-### with stories as a parameter
-### call the method to show all stories
+### call get_input_mashable method with stories as a parameter
+###call the method to show all stories
 stories = get_input_mashable(stories)
 show_all_stories(stories)
 

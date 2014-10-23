@@ -43,7 +43,8 @@ def show_all_stories(stories) #show all stories
   end
 end 
 
-### call get_input_mahable method with stories as a parameter
+### save stories as a call get_input_mahable method 
+### with stories as a parameter
 ### call the method to show all stories
 stories = get_input_mashable(stories)
 show_all_stories(stories)

@@ -22,20 +22,16 @@ stories = []
 ### add .each loop to store hashes for title, category and upvotes
 ### add a hash to stories 
 
-### just do title now!!!
 def get_input_mashable(stories)
-  response = JSON.parse(RestClient.get 'http://mashable.com/stories.json')
-  response['new'].each do |story|
-    story[:title] = story['title']
-    stories << { output_title: story[:title] }
-  end  
+  response = JSON.parse(RestClient).get 'http://mashable.com/stories.json'
+    response['new'].each do |response_story|
+      story[:title] = response_story['title']
+      story[:category] = response_story['channel']
+      stories << {output_title: story[:title], output_story: story[:category]}
+    end
   stories
-end 
+end
 
-
-
-
-### ok, now add category to our new method
 
 def show_all_stories(stories) #show all stories
   puts "Front Page:"
@@ -49,9 +45,10 @@ end
 
 
 
-### save stories as a call get_input_mahable method 
-### with stories as a parameter
+### call get_input_mashable method with stories as a parameter
 ### call the method to show all stories
+p 'here'
 stories = get_input_mashable(stories)
 show_all_stories(stories)
+
 
